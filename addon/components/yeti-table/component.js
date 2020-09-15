@@ -524,7 +524,6 @@ class YetiTable extends DidChangeAttrsComponent {
     if (this.get('pagination')) {
       let { pageNumber } = this.get('paginationData');
       this.set('pageNumber', Math.max(pageNumber - 1, 1));
-      this.runLoadData();
     }
   }
 
@@ -535,7 +534,6 @@ class YetiTable extends DidChangeAttrsComponent {
 
       if (!isLastPage) {
         this.set('pageNumber', pageNumber + 1);
-        this.runLoadData();
       }
     }
   }
@@ -551,7 +549,6 @@ class YetiTable extends DidChangeAttrsComponent {
       }
 
       this.set('pageNumber', pageNumber);
-      this.runLoadData();
     }
   }
 
